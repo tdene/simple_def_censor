@@ -41,6 +41,7 @@ This operation will generate a file called "censored.def". Inspecting this file 
 Finally, pretend to be the second party, receiving an censor DEF and wanting to uncensor it. Generate the legend from the PDK information on your end, then decrypt the DEF back into its original form:
 
 `./gen_legend.py --path_to_lef example/sky130_fd_sc_hd_merged.lef`
+
 `./decrypt.py --path_to_def censored.def`
 
 Note that the resulting file, "uncensored.def", is identical to the original DEF. This allows DEFs that contain proprietary standard cell information to be shared over public connections in plain-text by censoring them on the sender's side and uncensoring them on the receiver's side.
